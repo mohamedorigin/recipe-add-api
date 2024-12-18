@@ -1,0 +1,17 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python. we remove here python cache and virtual environement for consistency 
+# (we build a venv in dockerfile)
+
+app/__pychache__/
+app/*/__pychache__/
+app/*/*/__pychache__/
+app/*/*/*/__pychache__/
+.env/
+.venv/
+venv/
