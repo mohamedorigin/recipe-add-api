@@ -16,6 +16,10 @@ jobs:
           
       - name: Checkout # we checkout (access the code) for github job to apply test and linting
         uses: actions/checkout@v2
+      - name: Install Docker Compose # Install docker-compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
       - name: Test
         run: docker-compose run --rm app sh -c "python manage.py test"
       - name: Lint
